@@ -86,13 +86,15 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
+    const prompt = 'Hola Mongo';
+    console.log(prompt);
     const response = await fetch('https://nodosapi.onrender.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            prompt: data.get('prompt')
+            prompt: prompt
         })
     })
 
